@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madz | Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { 
+                extend: { 
+                    colors: { utama: '#ff0000', gelap: '#0a0a0a' },
+                    fontFamily: { 'orbitron': ['Orbitron', 'sans-serif'], 'inter': ['Inter', 'sans-serif'] }
+                } 
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #050505; color: #e5e5e5; scroll-behavior: smooth; }
+        .glow-red { text-shadow: 0 0 15px rgba(255, 0, 0, 0.7); }
+        .glass { background: rgba(20, 20, 20, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 0, 0, 0.1); }
+        .btn-glow:hover { box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); transform: translateY(-2px); }
+        
+        /* Animasi Muncul */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="font-inter">
+
+    <nav class="fixed top-0 w-full z-50 glass border-b border-utama/20">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <h1 class="font-orbitron text-utama font-bold text-xl tracking-widest glow-red">MADZ.DEV</h1>
+            <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest">
+                <a href="#home" class="hover:text-utama transition">Home</a>
+                <a href="#about" class="hover:text-utama transition">About</a>
+                <a href="#skills" class="hover:text-utama transition">Skills</a>
+                <a href="#projects" class="hover:text-utama transition">Projects</a>
+            </div>
+            <a href="https://wa.me/62895382705858" class="bg-utama/10 border border-utama text-utama px-4 py-2 rounded-lg text-xs font-bold btn-glow">HIRE ME</a>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
+        <div class="w-32 h-32 rounded-full border-2 border-utama p-1 mb-6 shadow-[0_0_30px_rgba(255,0,0,0.3)]">
+            <img src="https://ui-avatars.com/api/?name=Madz+Official&background=000&color=ff0000" class="w-full h-full rounded-full object-cover" alt="Profile">
+        </div>
+        <h2 class="text-gray-400 font-orbitron text-sm tracking-[5px] mb-2 uppercase">Web Developer & Designer</h2>
+        <h1 class="text-5xl md:text-7xl font-orbitron font-black mb-6">I AM <span class="text-utama glow-red">MADZ</span></h1>
+        <p class="max-w-xl text-gray-500 text-sm md:text-base leading-relaxed mb-8">
+            Berfokus pada pengembangan website futuristik, pembuatan bot WhatsApp, dan penyediaan infrastruktur panel Pterodactyl. Mengubah ide menjadi baris kode yang elegan.
+        </p>
+        <div class="flex gap-4">
+            <a href="#projects" class="bg-utama text-black font-bold px-8 py-3 rounded-full btn-glow transition">View Work</a>
+            <a href="#about" class="border border-white/20 hover:border-utama px-8 py-3 rounded-full transition">About Me</a>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-6 max-w-5xl mx-auto reveal">
+        <h3 class="font-orbitron text-utama text-center mb-12 text-2xl tracking-widest">TECHNICAL SKILLS</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-4">
+                <div class="flex justify-between text-xs font-bold"><span>HTML/CSS</span><span>90%</span></div>
+                <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+                    <div class="bg-utama h-full w-[90%] shadow-[0_0_10px_#ff0000]"></div>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div class="flex justify-between text-xs font-bold"><span>JAVASCRIPT</span><span>75%</span></div>
+                <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+                    <div class="bg-utama h-full w-[75%] shadow-[0_0_10px_#ff0000]"></div>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div class="flex justify-between text-xs font-bold"><span>BOT NODE.JS</span><span>85%</span></div>
+                <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+                    <div class="bg-utama h-full w-[85%] shadow-[0_0_10px_#ff0000]"></div>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div class="flex justify-between text-xs font-bold"><span>SERVER MANAGEMENT</span><span>80%</span></div>
+                <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+                    <div class="bg-utama h-full w-[80%] shadow-[0_0_10px_#ff0000]"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto reveal">
+        <h3 class="font-orbitron text-utama text-center mb-12 text-2xl tracking-widest">RECENT PROJECTS</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass p-4 rounded-2xl group">
+                <div class="h-40 bg-utama/5 rounded-xl mb-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1614853316476-de00d14cb1fc?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <h4 class="font-bold mb-2">Madz Market V2</h4>
+                <p class="text-xs text-gray-500 mb-4">Web store digital dengan sistem kategori dan loading RGB.</p>
+                <div class="flex gap-2">
+                    <span class="text-[10px] bg-white/5 px-2 py-1 rounded border border-white/10">Tailwind</span>
+                    <span class="text-[10px] bg-white/5 px-2 py-1 rounded border border-white/10">JS</span>
+                </div>
+            </div>
+            <div class="glass p-4 rounded-2xl group">
+                <div class="h-40 bg-utama/5 rounded-xl mb-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <h4 class="font-bold mb-2">WhatsApp Automation</h4>
+                <p class="text-xs text-gray-500 mb-4">Bot asisten grup otomatis dengan 1400+ fitur perintah.</p>
+                <div class="flex gap-2">
+                    <span class="text-[10px] bg-white/5 px-2 py-1 rounded border border-white/10">Node.js</span>
+                    <span class="text-[10px] bg-white/5 px-2 py-1 rounded border border-white/10">Baileys</span>
+                </div>
+            </div>
+            <div class="glass p-4 rounded-2xl group">
+                <div class="h-40 bg-utama/5 rounded-xl mb-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <h4 class="font-bold mb-2">Ptero Store UI</h4>
+                <p class="text-xs text-gray-500 mb-4">Dashboard manajemen panel untuk user pterodactyl.</p>
+                <div class="flex gap-2">
+                    <span class="text-[10px] bg-white/5 px-2 py-1 rounded border border-white/10">UI/UX</span>
+                    <span class="text-[10px] bg-white/5 px-2 py-1 rounded border border-white/10">API</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-sm">
+        <p>&copy; 2026 Madz Official. Built with <i class="fas fa-heart text-utama"></i> and Red Glow.</p>
+        <div class="flex justify-center gap-6 mt-4">
+            <a href="#" class="hover:text-utama transition"><i class="fab fa-github"></i></a>
+            <a href="#" class="hover:text-utama transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-utama transition"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal on Scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Jalankan sekali saat load
+        reveal();
+    </script>
+</body>
+</html>
